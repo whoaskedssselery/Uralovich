@@ -1,24 +1,114 @@
-.container {
-  padding-inline: var(--container-padding-inline-x);
-}
-
+@charset "UTF-8";
 :root {
   --color-light: #fff;
-  --color-dark: #000;
+  --color-dark: #333333;
   --container-padding-inline-x: 100px;
 }
 
+html {
+  background-color: var(--bg-color);
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-block: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .header {
+  font-size: clamp(16px, 1.2790697674vw, 22px);
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 30px;
        column-gap: 30px;
   align-items: center;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  height: 60px;
 }
 .header__logo {
   text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: clamp(18px, 1.8604651163vw, 32px);
+  font-weight: 700;
 }
 .header__menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  list-style: none;
+  padding: 0;
+}
+.header__link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.header__link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #FF6B6B; /* Цвет линии */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__link::after::hover {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  padding: 30px 30px;
+  border: 1px solid var(--color-dark);
+  border-radius: 30px;
+  height: 100%;
+  margin-block: 50px;
+}
+
+[aria-label="Хлебные крошки"] {
+  display: inline-flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+[aria-label="Хлебные крошки"] a {
+  text-decoration: none;
+  color: lightseagreen;
+}
+[aria-label="Хлебные крошки"] + h1 {
+  margin-top: 0;
+}
+
+h1 + section {
+  margin-top: 10px;
+}
+
+.container {
+  padding-inline: var(--container-padding-inline-x);
+}
+
+.button {
+  font-size: clamp(16px, 1.1627906977vw, 20px);
+  border: 2px solid var(--color-light);
+  border-radius: 10px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding-block: 7px;
+  font-weight: 700;
+  max-width: 100px;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

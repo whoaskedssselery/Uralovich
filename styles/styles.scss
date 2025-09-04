@@ -1,24 +1,5 @@
-@import 'container';
-
-:root {
-   --color-light: #fff;
-   --color-dark: #000;
-
-   --container-padding-inline-x: 100px;
-}
-
-.header {
-   display: flex;
-   justify-content: space-between;
-   column-gap: 30px;
-   align-items: center;
-
-   &__logo {
-      text-transform: uppercase;
-   }
-
-   &__menu {
-      display: flex;
-      flex-direction: column;
-   }
-}
+@import
+'mixins',
+'main',
+'container',
+'button';
