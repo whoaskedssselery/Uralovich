@@ -8,4 +8,7 @@
   justify-content: space-between;
   -moz-column-gap: 30px;
        column-gap: 30px;
+}
+.header__logo {
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
